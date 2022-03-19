@@ -1,3 +1,10 @@
+'''
+Paradigm: Dynamic
+
+Complexity: Ο(Nk * Ni * C), where Nk is the number of knapsacks, Ni is the number of items and C is the capacity of the larger knapsack.
+
+Description: A 0-1 knapsack problem, but with N knapsacks.
+'''
 def knapSack(capacities, weights, values, nItems):
     totalGain = 0
     for i in range(len(values)):
