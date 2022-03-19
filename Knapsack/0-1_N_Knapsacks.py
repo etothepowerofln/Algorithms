@@ -1,5 +1,7 @@
 '''
-Paradigm: Dynamic
+Author: Luiz Filipi de Sousa Moura, March 19 2022.
+
+Paradigm: Dynamic programming.
 
 Complexity: Ο(Nk * Ni * C), where Nk is the number of knapsacks, Ni is the number of items and C is the capacity of the larger knapsack.
 
