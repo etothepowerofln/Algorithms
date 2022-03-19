@@ -12,11 +12,14 @@ def knapSack(capacities, weights, values, nItems):
     for i in range(len(values)):
         totalGain += values[i]
     print("Max possible gain:", totalGain)
+    
+    #iterate for each knapsack
     for y in range(len(capacities)):
-        K = [[0 for x in range(capacities[y] + 1)] for x in range(nItems + 1)]
         wtsIn = []
         wtsNotIn = weights.copy()
-    
+        
+        #core knapsack problem
+        K = [[0 for x in range(capacities[y] + 1)] for x in range(nItems + 1)]
         for i in range(nItems + 1):
             for c in range(capacities[y] + 1):
                 if i == 0 or c == 0:
@@ -29,7 +32,8 @@ def knapSack(capacities, weights, values, nItems):
         print("\nKnapsack", y+1, "/", len(capacities))
         print("Total value in knapsack:", K[nItems][c])
         print("Total value not in knapsack:", totalGain - K[nItems][c])
-
+        
+        #retrieve weights
         w = capacities[y]
         for i in range(n, 0, -1):
             if K[nItems][c] <= 0:
